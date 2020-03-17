@@ -17,6 +17,11 @@
       "appUrl": "https:\/\/bld900.com\/get-app\/install\/5C0035CD-0FA602C8\/00e6b35b07",
       "size": "47.06 MB",
       "status": 0
-    }
+    },
+      {
+        "cases":198164,
+         "deaths":7965,
+         "recovered":81727
+      }
       
 ]
