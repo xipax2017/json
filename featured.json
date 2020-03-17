@@ -19,9 +19,9 @@
       "status": 0
     },
       {
-        "cases":198164,
-         "deaths":7965,
-         "recovered":81727
+        "cases":"198164",
+         "deaths":"7965",
+         "recovered":"81727"
       }
       
 ]
