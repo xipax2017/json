@@ -1,0 +1,14 @@
+[
+        {
+          "version": "13.4",
+          "buildid": "17E255",
+          "sha1sum": "ee7291ce815d4fdd13db2aa4c57f5d9023801600",
+          "md5sum": "7427c74e6876c7716e3c975cd9aa0fb8",
+          "size": 5171196146,
+          "releasedate": "2020-03-24T16:57:05Z",
+          "uploaddate": "2020-03-11T20:13:21Z",
+          "url": "http://updates-http.cdn-apple.com/2020WinterFCS/fullrestores/061-20287/0C81F0D6-2166-4954-A6CB-B1F5792C6F12/iPhone11,2,iPhone11,4,iPhone11,6,iPhone12,3,iPhone12,5_13.4_17E255_Restore.ipsw",
+          "signed": true,
+          "filename": "iPhone11,2,iPhone11,4,iPhone11,6,iPhone12,3,iPhone12,5_13.4_17E255_Restore.ipsw"
+        }
+      ]
