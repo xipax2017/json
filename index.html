@@ -37,7 +37,7 @@ fetch('https://xipax2017.github.io/json/json.json')
     .then(function (data) {
         let result = ``;
         data.forEach((apps) => {
-            const {  version, buildid, signed, sha1sum, md5sum, identifier, releasedate } = apps
+            const {  version, buildid, signed, sha1sum, md5sum, filename, releasedate } = apps
             result +=
 `
 <div class="${signed}" >
@@ -46,7 +46,7 @@ fetch('https://xipax2017.github.io/json/json.json')
 </div>
 <div class="flex-grow mr-2">
 <p class="text-white">iOS ${version} (${buildid})</p>
-<div class="info">${identifier}</div>
+<div class="info">${filename}</div>
 <div class="info">SHA1: ${sha1sum}</div>
 <div class="info">MD5: ${md5sum}</div>
 <div class="info">Date: ${releasedate}</div>
