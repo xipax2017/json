@@ -36,7 +36,7 @@ fetch('https://api.ipsw.me/v4/ipsw/13.3.1')
     .then(function (data) {
         let result = ``;
         data.forEach((apps) => {
-            const {  version, buildid, signed, sha1sum, md5sum, f, releasedate } = apps
+            const {  version, buildid, signed, sha1sum, md5sum, identifier, releasedate } = apps
             result +=
 `
 <div class="${signed}" >
@@ -45,7 +45,7 @@ fetch('https://api.ipsw.me/v4/ipsw/13.3.1')
 </div>
 <div class="flex-grow mr-2">
 <p class="text-white">iOS ${version} (${buildid})</p>
-<div class="info">${f}</div>
+<div class="info">${identifier}</div>
 <div class="info">SHA1: ${sha1sum}</div>
 <div class="info">MD5: ${md5sum}</div>
 <div class="info">${releasedate}</div>
