@@ -42,18 +42,19 @@ fetch('json.json')
     .then(function (data) {
         let result = ``;
         data.forEach((apps) => {
-            const {  version, buildid, signed, sha1sum, md5sum, identifier, releasedate } = apps
+            const {  version, buildid, signed, sha1sum, md5sum, uploaddate, releasedate, filesize } = apps
             result +=
 `
 <div class="${signed}" >
 <div class="items-center justify-start content-center align-center flex flex-grow">
 <div class="imgg"></div>
 <div class="flex-grow mr-2">
-<p class="text-white">iOS ${version} (${buildid})</p>
-<div class="info"></div>
+<p class="text-white">iOS ${version} (${buildid}) </p>
+<div class="info">filesize: ${filesize} GB</div>
 <div class="info">SHA1: ${sha1sum}</div>
 <div class="info">MD5: ${md5sum}</div>
-<div class="info">${releasedate}</div>
+<div class="info">releasedate: ${releasedate}</div>
+<div class="info">uploaddate: ${uploaddate}</div>
 
 </div>
 </div>
