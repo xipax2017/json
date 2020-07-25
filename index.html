@@ -5,14 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-      <script src="https://unpkg.com/eva-icons"></script>
 
 
 <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
 <title>Firmware API</title>
 <link rel="stylesheet" href="css/dark.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css">
 
 <body>
 	<div id="list">
@@ -22,75 +20,43 @@
         <p>Firmware API</p>
         </div>
 
-	<p id="signed true"></p>
-    <p id="signed false"></p>
+    <p id="packages tweaks"></p>
 
 
 	</div>
     <script>
       eva.replace()
     </script>
-	<script>
-//getData function
-
-//Using javascript ES5 function 
-
-fetch('json.json')
-    .then(function (res) {
-        return res.json();
-    })
-    .then(function (data) {
-        let result = ``;
-        data.forEach((apps) => {
-            const {  version, buildid, signed, sha1sum, md5sum, uploaddate, releasedate, filesize } = apps
-            result +=
-`
-<div class="${signed}" >
-<div class="items-center justify-start content-center align-center flex flex-grow">
-<div class="imgg"></div>
-<div class="flex-grow mr-2">
-<p class="text-white">iOS ${version} (${buildid}) </p>
-<div class="info">filesize: ${filesize} GB</div>
-<div class="info">SHA1: ${sha1sum}</div>
-<div class="info">MD5: ${md5sum}</div>
-<div class="info">releasedate: ${releasedate}</div>
-<div class="info">uploaddate: ${uploaddate}</div>
-
-</div>
-</div>
-
-</div>`;
-
-
-            document.getElementById('signed true').innerHTML = result;
-        });
-       })
-  </script>
     	<script>
 //getData function
 
 //Using javascript ES5 function 
 
-fetch('https://api.ipsw.me/v4/ipsw/')
+fetch('http://julioverne.github.io/all.packages')
     .then(function (res) {
         return res.json();
     })
     .then(function (data) {
         let result = ``;
         data.forEach((apps) => {
-            const {  version, buildid, signed, sha1sum, md5sum, identifier, releasedate } = apps
+            const {  name, version, section, size, md5sum, identifier, package } = apps
             result +=
 `
-<div class="${signed}" >
+<div class="${section}" >
+
 <div class="items-center justify-start content-center align-center flex flex-grow">
-<div class="imgg">        <i data-eva="github" data-eva-fill="#36f" data-eva-height="48" data-eva-width="48"></i>
+<div class="imgg">
+<i data-eva="github" data-eva-fill="#36f" data-eva-height="48" data-eva-width="48"></i>
 </div>
-<div class="flex-grow mr-2">
-<p class="text-white">iOS ${version} (${buildid})</p>
-<div class="info">${identifier}</div>
-<div class="info">SHA1: ${sha1sum}</div>
-<div class="info">MD5: ${md5sum}</div>
-<div class="info">${releasedate}</div>
+<div class="flex-grow mr-2" style="width: 100%;margin-left: 10px;">
+<p class="text-white">${name}</p>
+<div class="info">${package}</div>
+<div class="grid-container">
+<div class="infos">size <h2>${size}</h2></div>
+<div class="infos">version <p>${version}</p></div>
+<div class="infos">section <p>${section}</p></div>
+
+</div>
 
 </div>
 </div>
@@ -98,7 +64,7 @@ fetch('https://api.ipsw.me/v4/ipsw/')
 </div>`;
 
 
-            document.getElementById('signed false').innerHTML = result;
+            document.getElementById('packages tweaks').innerHTML = result;
         });
        })
   </script>
