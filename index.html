@@ -39,7 +39,7 @@ fetch('http://julioverne.github.io/all.packages')
     .then(function (data) {
         let result = ``;
         data.forEach((apps) => {
-            const {  name, version, section, size, md5sum, identifier, package } = apps
+            const {  name, version, section, size, package } = apps
             result +=
 `
 <div class="${section}" >
