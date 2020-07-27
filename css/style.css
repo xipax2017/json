@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f7fa;
+    background-color: #f2f1f8;
     text-rendering: optimizeLegibility!important;
     -webkit-font-smoothing: antialiased!important;
     font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,-apple-system-font,Helvetica Neue;
@@ -31,60 +31,101 @@ span{
 }
 
 .flex {
-    display: flex;
+    display: -webkit-inline-box;
+    width: 100%;
 }
 .info{
-    color: #a7a7a7;
-    font-size: 13px;
+    color: #000;
+    font-size: 15px;
     font-weight: 500;
     width: 100%;
-    
+    overflow: hidden;
+}
+.info2{
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+
+  overflow-x: hidden;
+}
+.grid-container{
+    margin-left: -70px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 500;
+  overflow-x: hidden;
+    width: 130%;
 }
 h2{   
     margin:0;
     font-size: 12px
 
 }
-.Tweaks .infos{
-    color: #a7a7a7;
+
+
+.text1 .text2 .text3 {
+    grid-area: text1;
+    font-size: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.home p{
+    font-size: 30px;
+    padding: 18px;
+    font-weight: 600;
+}
+.true .h3{
+    font-size: 10px;
+}
+.true .infos{
+    color: #000;
     font-size: 14px;
     font-weight: 500;
-    width: 100%;
+    width: 76%;
     padding-top: 20px;
-    text-align: center;
+    padding-left: -50px
     
 }
-.Tweaks .text-white {
+.true .text-white {
     color: #000;
     font-size: 18px;
-    font-weight: 500
-    
+    font-weight: 500;
 }
-.Tweaks {
-        margin: 0.90rem;
-    overflow: hidden;
-    color: rgba(50,60,71,.4);
-/*background-image: linear-gradient(90deg,#49d6b5,#00a8af);*/
-    background-color: #fff;
-    box-shadow: 0 4px 16px 0 rgba(0,0,0,.06);
-    border-radius: 12px;
-    padding: .75rem;
-   /* background-image: linear-gradient(-90deg, #077a67, #4cccb0);
+.true {
+        margin: 0.9rem;
+        overflow: hidden;
+        color: rgba(50,60,71,.4);
+        background-image: linear-gradient(90deg,#ffffff,#ffffff);
+        box-shadow: 0 4px 16px 0 rgba(0,0,0,.06);
+        border-radius: 12px;
+        padding: 0.75rem;
+        /* background-image: linear-gradient(-90deg, #077a67, #4cccb0);
 filter: drop-shadow(0px 3px 12px rgba(7, 122, 103, 0.502));*/
-
 }
-.Tweaks .imgg {
+.true2 {
+        margin: 0.5em;
+        overflow: hidden;
+        color: rgba(50,60,71,.4);
+        background-color: #076dc6;
+        box-shadow: 0 4px 16px 0 rgba(0,0,0,.06);
+        border-radius: 12px;
+        padding: 0.4em;
+        /* background-image: linear-gradient(-90deg, #077a67, #4cccb0);
+filter: drop-shadow(0px 3px 12px rgba(7, 122, 103, 0.502));*/
+}
+.true .imgg {
+/*
+background-image: url("https://cdn.dribbble.com/users/104117/screenshots/3802691/attachments/858783/iphonex_-dark-.png");*/
+background-image: url("https://lh3.googleusercontent.com/proxy/hVRUrf_oH9hh0_hBK-pOes2SRKgBM9K1Ll2CnEP-wvo8cm2ga1jPLqwceZEhb_xb6aOgCR7JJBXL4JwGnIUO_aUPF_SjxlFpgsgzByL5rqCB98jftWdlcIsV2QisVxX_1VTBiSvZx_-x20xXO_eLwXDTGA=s0-d");
+height:0px;
+    padding: 33px;
 
-    background-image: url("https://img.icons8.com/ios-glyphs/60/000000/settings.png");
-    height: 50px;
-    padding-right: 50px;
-    background-size: cover;
-        /*color: #fff;
-    font-size: 20px;
-        margin-right: 8px;
-    margin-top: -3px;
-        border-left: 6px solid #ffbf25!important;*/
-    border-radius: 0px;
+
+background-size: cover;
+width: auto;
+
+
 }
 .Development .infos{
     color: #a7a7a7;
@@ -218,24 +259,3 @@ filter: drop-shadow(0px 3px 12px rgba(7, 122, 103, 0.502));*/
     margin-right: 13px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 40% 40% 40% ;/*
-  grid-template-rows: 3.5em;*/
-  gap: 3px 3px;
-  grid-template-areas: "text1 text2 text3 ";
-    grid-template-columns: repeat(3, 3fr);
-}
-
-.text1 .text2 .text3 {
-    grid-area: text1;
-    font-size: 17px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.home p{
-    font-size: 35px;
-    padding: 18px;
-    font-weight: 600;
-}

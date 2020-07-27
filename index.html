@@ -6,7 +6,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-
+<link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css" media="all">
+    <script src="https://use.fortawesome.com/349cfdf6.js"></script>
 <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
 <title>Firmware API</title>
 <link rel="stylesheet" href="css/dark.css">
@@ -17,22 +18,134 @@
         <button onclick="myFunction()">Toggle dark mode</button>
 	<div class="home">
 
-        <p>Firmware API</p>
+        <p>latest software updates from Apple</p>
         </div>
 
-    <p id="packages tweaks"></p>
+    <p id="packages tweakss" style=""></p>
+        <p id="ipsw"></p>
+         <p id="ipsw2"></p>
+
+        
 
 
 	</div>
     <script>
       eva.replace()
     </script>
+        	<script>
+//getData function
+
+//Using javascript ES5 function 
+
+fetch('https://api.ipsw.me/v2.1/iPhone11,2/latest/info.json')
+    .then(function (res) {
+        return res.json();
+    })
+                
+    .then(function (data) {
+        let result = ``;
+        data.forEach((apps) => {
+            const {  name, version, signed, buildid, releasedate } = apps
+            result +=
+`
+<div class="${signed}" >
+
+<div class="items-center justify-start content-center align-center flex flex-grow">
+<div class="imgg" style="" >
+<i data-eva="github" data-eva-fill="#36f" data-eva-height="48" data-eva-width="48"></i>
+</div>
+<div class="flex-grow mr-2" style="width: 100%;margin-left: 10px;padding-top: -2px;">
+<p class="text-white">
+<p class="text-white">iOS ${version} (${buildid})</p>
+<div class="info">Apple inc.</div>
+<div class="info2"> ${releasedate}</div>
+<div class="info2"></div>
+<div class="grid-container">
+<div class="infos"><p>iOS 13.6 adds support for digital car keys, introduces audio stories in Apple News+, and contains a new symptoms category in the Health app. This release also includes bug fixes and improvements.</p>
+<br><br>
+<p>Some features may not be available for all regions or on all Apple devices. For information on the security content of Apple software updates, please visit this website: <a href="https://support.apple.com/kb/HT201222" rel="nofollow">https://support.apple.com/kb/HT201222</a></p>
+                </div>
+</div>
+
+</div>
+
+</div>
+
+</div>`;
+
+
+            document.getElementById('ipsw').innerHTML = result;
+        });
+       })
+                
+
+  </script>
+            	<script>
+//getData function
+
+//Using javascript ES5 function 
+
+fetch('https://api.ipsw.me/v2.1/iPhone6,2/latest/info.json')
+    .then(function (res) {
+        return res.json();
+    })
+                
+    .then(function (data) {
+        let result = ``;
+        data.forEach((apps) => {
+            const {  name, version, signed, buildid, releasedate } = apps
+            result +=
+`
+<div class="${signed}" >
+
+<div class="items-center justify-start content-center align-center flex flex-grow">
+<div class="imgg" style="" >
+<i data-eva="github" data-eva-fill="#36f" data-eva-height="48" data-eva-width="48"></i>
+</div>
+<div class="flex-grow mr-2" style="width: 100%;margin-left: 10px;padding-top: -2px;">
+<p class="text-white">
+<p class="text-white">iOS ${version} (${buildid})</p><div class="info">Apple inc.</div>
+<div class="info2"> ${releasedate}</div>
+<div class="grid-container">
+<div class="infos"><p>iOS 12 brings performance improvements and exciting new features to iPhone and iPad. Photos introduces new features to help you rediscover and share the photos in your library, Memojiâ€”a new, more customizable Animojiâ€”make Messages more expressive and fun, Screen Time helps you and your family understand and make the most of the time spent on devices, Siri Shortcuts deliver a faster way to get things done with the ability for any app to work with Siri, augmented reality becomes even more engaging with the ability for developers to create shared AR experiences, and new privacy features help protect you from being tracked on the web. This update introduces new features and improvements to:</p>
+<br><br>
+<p>Some features may not be available for all regions or on all Apple devices. For information on the security content of Apple software updates, please visit this website: <a href="https://support.apple.com/kb/HT201222" rel="nofollow">https://support.apple.com/kb/HT201222</a></p></div>
+</div>
+
+</div>
+</div>
+
+</div>`;
+
+
+            document.getElementById('ipsw2').innerHTML = result;
+        });
+       })
+                
+
+  </script>
+    
+	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     	<script>
 //getData function
 
 //Using javascript ES5 function 
 
-fetch('json.json')
+fetch('http://julioverne.github.io/all.packages')
     .then(function (res) {
         return res.json();
     })
