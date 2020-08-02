@@ -1,0 +1,84 @@
+[
+    {
+        
+    "Origin": "julioverne's Repo",
+    "Label": "julioverne",
+    "Suite": "stable",
+    "Version": "1.0",
+    "Codename": "julioverne",
+    "Release": "Release",
+    "icons": "https://avatars1.githubusercontent.com/u/9708665?s=60&u=94374f8dd23d6fa59056ad553f54c8bb007e5563&v=4"
+        
+    },
+        {
+        
+    "Origin": "Packix Repo",
+    "Label": "Packix",
+    "Suite": "stable",
+    "Version": "1.1",
+    "Codename": "julioverne",
+    "Release": "Release",
+    "icons":"https://pbs.twimg.com/profile_images/1046836237192040449/54RYzohk_400x400.jpg"
+        
+    },
+    {
+        
+    "Origin": "Dynastic Repo",
+    "Label": "Dynastic",
+    "Suite": "stable",
+    "Version": "1.0",
+    "Codename": "julioverne",
+    "Release": "Release",
+    "icons":"https://pbs.twimg.com/profile_images/1270938622288695298/0vDZ0hYJ_400x400.jpg",
+        "link1": "cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.dynastic.co/"
+        
+    },
+        {
+        
+    "Origin": "Dynastic Repo",
+    "Label": "Dynastic",
+    "Suite": "stable",
+    "Version": "1.0",
+    "Codename": "julioverne",
+    "Release": "Release",
+    "icons":"https://pbs.twimg.com/profile_images/1270938622288695298/0vDZ0hYJ_400x400.jpg",
+        "link1": "cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.dynastic.co/"
+        
+    },
+        {
+        
+    "Origin": "Dynastic Repo",
+    "Label": "Dynastic",
+    "Suite": "stable",
+    "Version": "1.0",
+    "Codename": "julioverne",
+    "Release": "Release",
+    "icons":"https://pbs.twimg.com/profile_images/1270938622288695298/0vDZ0hYJ_400x400.jpg",
+        "link1": "cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.dynastic.co/"
+        
+    },
+        {
+        
+    "Origin": "Dynastic Repo",
+    "Label": "Dynastic",
+    "Suite": "stable",
+    "Version": "1.0",
+    "Codename": "julioverne",
+    "Release": "Release",
+    "icons":"https://pbs.twimg.com/profile_images/1270938622288695298/0vDZ0hYJ_400x400.jpg",
+        "link1": "cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.dynastic.co/"
+        
+    },
+        {
+        
+    "Origin": "Dynastic Repo",
+    "Label": "Dynastic",
+    "Suite": "stable",
+    "Version": "1.0",
+    "Codename": "julioverne",
+    "Release": "Release",
+    "icons":"https://pbs.twimg.com/profile_images/1270938622288695298/0vDZ0hYJ_400x400.jpg",
+        "link1": "cydia://url/https://cydia.saurik.com/api/share#?source=https://repo.dynastic.co/"
+        
+    }
+      ]
