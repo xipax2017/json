@@ -6,22 +6,102 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.14.0/css/pro.min.css" media="all">
-    <script src="https://use.fortawesome.com/349cfdf6.js"></script>
-<meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
 <title>Firmware API</title>
 <link rel="stylesheet" href="css/dark.css">
 <link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<style>
+.dropbtn {
+    display: ;
+  background-color: #3a8ad2;
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 0px solid #f9f9f9; 
+  border-radius: 30px;
+   cursor: pointer;
+    margin-top: 10px;
+   /* box-shadow: 0 1px 16px 0 #d4e0f8 ;*/
+}
 
+.dropdown {
+  /*position: relative;*/
+  display: inline-block;
+    float: ;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+ border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 30px 8px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+      font-weight: 600;
+    padding-right: 8px;
+     border-radius: 10px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #588cf2;
+}
+    .butget{
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.2rem 1.3rem;
+    font-size: 13px;
+    line-height: 1.5;
+    border-radius: 5rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    cursor: pointer;
+    margin-top: .25rem;
+    margin-bottom: 0.25rem;
+        float: right;
+            margin-right: 80px;
+            margin-top: -30px;
+    }
+    href{
+        
+        display: none;
+    }
+</style>
 <body>
 	<div id="list">
         <button onclick="myFunction()">Toggle dark mode</button>
 	<div class="home">
 
-        <p>latest software updates from Apple</p>
+        <p>Download Apps ipa [ jailbreak only</p>
         </div>
 
-    <p id="packages tweakss" style=""></p>
+    <p id="packages tweaks" style=""></p>
         <p id="ipsw"></p>
          <p id="ipsw2"></p>
 
@@ -36,8 +116,8 @@
 //getData function
 
 //Using javascript ES5 function 
-
-fetch('https://api.ipsw.me/v2.1/iPhone11,2/latest/info.json')
+/*
+fetch('json.json')
     .then(function (res) {
         return res.json();
     })
@@ -45,33 +125,37 @@ fetch('https://api.ipsw.me/v2.1/iPhone11,2/latest/info.json')
     .then(function (data) {
         let result = ``;
         data.forEach((apps) => {
-            const {  name, version, signed, buildid, releasedate } = apps
+            const {  Origin, Release, Label, icons, Version, link1} = apps
             result +=
 `
-<div class="${signed}" >
+<div class="${Release}" >
 
 <div class="items-center justify-start content-center align-center flex flex-grow">
 <div class="imgg" style="" >
-<i data-eva="github" data-eva-fill="#36f" data-eva-height="48" data-eva-width="48"></i>
+<img style="-webkit-user-select: none;margin: auto; width: 64px; border-radius: 22.5%;display: ;filter: drop-shadow(0px 2px 8px rgba(0,0,0,0.16));" src="${icons}">
 </div>
-<div class="flex-grow mr-2" style="width: 100%;margin-left: 10px;padding-top: -2px;">
+<div class="flex-grow mr-2" style="width: 95%;margin-left: 10px;padding-top: -2px;">
 <p class="text-white">
-<p class="text-white">iOS ${version} (${buildid})</p>
-<div class="info">Apple inc.</div>
-<div class="info2"> ${releasedate}</div>
-<div class="info2"></div>
-<div class="grid-container">
-<div class="infos"><p>iOS 13.6 adds support for digital car keys, introduces audio stories in Apple News+, and contains a new symptoms category in the Health app. This release also includes bug fixes and improvements.</p>
-<br><br>
-<p>Some features may not be available for all regions or on all Apple devices. For information on the security content of Apple software updates, please visit this website: <a href="https://support.apple.com/kb/HT201222" rel="nofollow">https://support.apple.com/kb/HT201222</a></p>
-                </div>
+<p class="text-white">${Origin}</p>
+<div class="info">${Label}</div>
+<div class="info">${Version}</div>
+<div class="dropdown">
+  <button class="dropbtn">Add Sources</button>
+  <div class="dropdown-content">
+  <a href="${link1}"><img style="-webkit-user-select: none;margin: auto; width: 20px; border-radius: 22.5%; margin-left: -24px;box-shadow: 0 4px 16px 0 rgba(0,0,0,.06);" src="https://api.ios-repo-updates.com/images/apt/cydia.png"><span>Add Source to<strong> Cydia</strong><!----></span></a>
+  <a href="${link1}"><img style="-webkit-user-select: none;margin: auto; width: 20px; border-radius: 22.5%; margin-left: -24px;" src="https://api.ios-repo-updates.com/images/apt/sileo.png"><span>Add Source to<strong> Sileo</strong><!----></span></a>
+  <a href="${link1}"><img style="-webkit-user-select: none;margin: auto; width: 20px; border-radius: 22.5%; margin-left: -24px;" src="https://api.ios-repo-updates.com/images/apt/zebra.png"><span>Add Source to<strong> Zebra</strong><!----></span></a>
+  </div>
+</div>
 </div>
 
-</div>
 
-</div>
 
-</div>`;
+
+</div></div>
+
+ <a href="${link1}"><img style="-webkit-user-select: none;margin: auto; width: 20px; border-radius: 22.5%; margin-left: -24px;" src="https://api.ios-repo-updates.com/images/apt/zebra.png"><span>Add Source to<strong> Zebra</strong><!----></span></a>
+`;
 
 
             document.getElementById('ipsw').innerHTML = result;
@@ -84,7 +168,7 @@ fetch('https://api.ipsw.me/v2.1/iPhone11,2/latest/info.json')
 //getData function
 
 //Using javascript ES5 function 
-
+/*
 fetch('https://api.ipsw.me/v2.1/iPhone6,2/latest/info.json')
     .then(function (res) {
         return res.json();
@@ -102,7 +186,7 @@ fetch('https://api.ipsw.me/v2.1/iPhone6,2/latest/info.json')
 <div class="imgg" style="" >
 <i data-eva="github" data-eva-fill="#36f" data-eva-height="48" data-eva-width="48"></i>
 </div>
-<div class="flex-grow mr-2" style="width: 100%;margin-left: 10px;padding-top: -2px;">
+<div class="flex-grow mr-2" style="width: 100%;margin-left: 0px;padding-top: -2px;">
 <p class="text-white">
 <p class="text-white">iOS ${version} (${buildid})</p><div class="info">Apple inc.</div>
 <div class="info2"> ${releasedate}</div>
@@ -125,49 +209,38 @@ fetch('https://api.ipsw.me/v2.1/iPhone6,2/latest/info.json')
 
   </script>
     
-	
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     	<script>
 //getData function
 
 //Using javascript ES5 function 
-
-fetch('http://julioverne.github.io/all.packages')
+            
+fetch('json.json')
     .then(function (res) {
         return res.json();
     })
     .then(function (data) {
         let result = ``;
         data.forEach((apps) => {
-            const {  name, version, section, size, package } = apps
+            const {  type, seller, ver, size, icon, link1, bundle_id, name, id } = apps
             result +=
 `
-<div class="${section}" >
+<div class="${type}" >
 
 <div class="items-center justify-start content-center align-center flex flex-grow">
-<div class="imgg">
-<i data-eva="github" data-eva-fill="#36f" data-eva-height="48" data-eva-width="48"></i>
+<div class="imgg" style="" >
+<img style="-webkit-user-select: none;margin: auto; width: 64px; border-radius: 22.5%;display: ;" src="${icon}">
 </div>
 <div class="flex-grow mr-2" style="width: 100%;margin-left: 10px;">
 <p class="text-white">${name}</p>
-<div class="info">${package}</div>
+<div class="info"></div>
 <div class="grid-container">
-<div class="infos">size <h2>${size}</h2></div>
-<div class="infos">version <p>${version}</p></div>
-<div class="infos">section <p>${section}</p></div>
+<div class="infos">${seller}</div>
+<div class="infos">Size: ${size}</div>
+<a href="http://c491z583.pushrcdn.com/strg/8/${id}.ipa" class="butget">Download</a>
+<div class="infos">Version: ${ver}</div>
+
 
 </div>
 
