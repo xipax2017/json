@@ -1,7 +1,7 @@
 body {
-font-family: "SF Pro Text";
+font-family: monospace;
         transition: .2s;
-    background-color: #eee;
+    background-color: #f8f8f8;
 }
 
 .grid-container {
